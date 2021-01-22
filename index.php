@@ -12,13 +12,17 @@
  * @package WP_Bootstrap_Starter
  */
 
-get_header(); ?>
+get_header();
+
+
+?>
 
 	<section id="primary" class="content-area col-sm-12 col-md-12 col-lg-12">
 		<div id="main" class="site-main" role="main">
 
 		<?php
         get_template_part( 'template-parts/sara-enough-enough');
+        get_template_part( 'template-parts/index-latest-news');
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) : ?>

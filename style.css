@@ -363,6 +363,10 @@ a.page-scroller {
 ## Pages Custom
 --------------------------------------------------------------*/
 
+.index-news h2 {
+  font-size: 3em;
+}
+
 .sara-home h1 {
   font-size: 1em;
   line-height: 28.799999237060547px;
