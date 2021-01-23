@@ -288,25 +288,39 @@ table {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-header#masthead {
-  margin-bottom: 0;
-  background-color: #563d7c ;
-  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
-  padding: .74rem 1rem;
-}
+/*header#masthead {*/
+/*  margin-bottom: 0;*/
+/*  background-color: #563d7c ;*/
+/*  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);*/
+/*  padding: .74rem 1rem;*/
+/*}*/
 
-.navbar-brand > a {
-  color: rgba(0, 0, 0, 0.9);
-  font-size: 1.1rem;
-  outline: medium none;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 700;
-}
+/*.navbar-brand > a {*/
+/*  color: rgba(0, 0, 0, 0.9);*/
+/*  font-size: 1.1rem;*/
+/*  outline: medium none;*/
+/*  text-decoration: none;*/
+/*  color: #fff;*/
+/*  font-weight: 700;*/
+/*}*/
 
 .navbar-brand > a:visited, .navbar-brand > a:hover {
   text-decoration: none;
 }
+
+.site-header {
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+  color: #999;
+  transition: ease-in-out color .15s;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
 
 #page-sub-header {
   position: relative;
@@ -367,7 +381,18 @@ a.page-scroller {
   font-size: 3em;
 }
 
-.sara-home h1 {
+.index-btn {
+  border-radius: 32px;
+  border-width: 2px;
+  padding: 12px 20px;
+  font-weight: 550;
+}
+
+.headline btn {
+  border-radius: 32px;
+}
+
+.headline h3 {
   font-size: 1em;
   line-height: 28.799999237060547px;
   font-weight: bold;
@@ -400,10 +425,10 @@ a.page-scroller {
 }
 
 body:not(.theme-preset-active) #masthead .navbar-nav > li > a {
-  color: #cdbfe3;
+  color: #0a0a0a;
   padding: 0.5rem;
-  font-weight: 500;
-  font-size: 0.875rem;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover,

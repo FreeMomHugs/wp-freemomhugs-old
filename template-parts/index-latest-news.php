@@ -28,8 +28,8 @@
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
 ?>
-            <div class="bg-light col-sm pt-3 px-3 pt-md-5 px-md-5 text-center text-dark overflow-hidden" style="background-image: url('<?php the_post_thumbnail_url() ?>'); background-size: auto;">
-                <div class="my-3 py-3">
+            <div class="bg-light col-sm pt-3 px-3 pt-md-5 px-md-5 text-center text-dark" style="background-image: url('<?php the_post_thumbnail_url() ?>'); background-size: cover; background-position: center;">
+                <div class="my-5 py-5">
                 <?php
                 if ( true ) :
 
@@ -37,8 +37,8 @@
                     the_excerpt('<p class="lead">', '</p>');
                 endif;
                 ?>
+                    <a href="<?php the_permalink()?>" type="button" class="btn btn-outline-light index-btn" >Read More</a>
                 </div>
-                <div style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
             </div>
     <?php
 				//get_template_part( 'template-parts/content', get_post_format() );
