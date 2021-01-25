@@ -52,7 +52,7 @@
 
                     <?php
                     if ( true ) :
-                        ?><a class="text-dark" href="<?php echo get_permalink();?>"><?php echo get_the_title();?></a>
+                        ?><a class="text-dark font-700-weight" href="<?php echo get_permalink();?>"><?php echo get_the_title();?></a>
                     </h3>
                     <?php
                         the_date('M d','<div class="mb-1 text-muted">', '</div>');

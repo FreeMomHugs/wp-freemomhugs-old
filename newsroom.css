@@ -15,7 +15,11 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  /*font-family: "Playfair Display", Georgia, "Times New Roman", serif;*/
+}
+
+a {
+  color:black;
 }
 
 .display-4 {
@@ -107,6 +111,11 @@ h1, h2, h3, h4, h5, h6 {
 /*
  * Blog posts
  */
+
+.blog-post h1 {
+  font-weight: 700;
+}
+
 .blog-post {
   margin-bottom: 4rem;
 }

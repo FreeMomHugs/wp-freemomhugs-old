@@ -27,15 +27,15 @@ function wp_bootstrap_starter_posted_on() {
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
-	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'wp-bootstrap-starter' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-	);
+//	$byline = sprintf(
+//		esc_html_x( 'by %s', 'post author', 'wp-bootstrap-starter' ),
+//		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+//	);
     $tempCat =  get_the_category()[0]->cat_name;
     $catURL = get_category_link(get_the_category()[0]->term_id);
     $cat = sprintf(
         esc_html_x( '%s', 'post category', 'wp-bootstrap-starter' ),
-        '<span class=""><a class="url fn n" href="' . esc_url( $catURL ) . '">' . esc_html( $tempCat ) . '</a></span>'
+        '<span class=""><a class="url fn n" href="' . esc_url( "" ) . '">' . esc_html( $tempCat ) . '</a></span>'
     );
 	$byline = "";
 
