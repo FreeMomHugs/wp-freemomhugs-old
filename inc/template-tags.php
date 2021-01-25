@@ -23,7 +23,7 @@ function wp_bootstrap_starter_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'wp-bootstrap-starter' ),
+		esc_html_x( '%s', 'post date', 'wp-bootstrap-starter' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
@@ -31,8 +31,15 @@ function wp_bootstrap_starter_posted_on() {
 		esc_html_x( 'by %s', 'post author', 'wp-bootstrap-starter' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
+    $tempCat =  get_the_category()[0]->cat_name;
+    $catURL = get_category_link(get_the_category()[0]->term_id);
+    $cat = sprintf(
+        esc_html_x( '%s', 'post category', 'wp-bootstrap-starter' ),
+        '<span class=""><a class="url fn n" href="' . esc_url( $catURL ) . '">' . esc_html( $tempCat ) . '</a></span>'
+    );
+	$byline = "";
 
-	echo '<span class="posted-on">' . $posted_on . '</span> | <span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+	echo '<span class="posted-on">' . $posted_on . '</span> | <span class="byline"> ' . $cat . '</span>'; // WPCS: XSS OK.
 
     if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
         echo ' | <span class="comments-link"><i class="fa fa-comments" aria-hidden="true"></i> ';

@@ -39,8 +39,8 @@
 
         <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
             <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
-                <a href="<?php echo esc_url( home_url( '/' )); ?>">
-                    <img src="<?php echo esc_url(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                <a class="brand" href="<?php echo esc_url( home_url( '/' )); ?>">
+                    <img src="<?php echo esc_url(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"  style="max-height: 5rem;">
                 </a>
             <?php else : ?>
                 <h5 class="my-0 mr-md-auto font-weight-normal"><?php echo esc_attr( get_bloginfo( 'name' ) ); ?></h5>

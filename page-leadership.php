@@ -15,10 +15,10 @@
 get_header();
 
 ?>
-    <link rel="stylesheet" href="../wp-content/themes/wp-bootstrap-starter/newsroom.css" />
+    <link rel="stylesheet" href="../wp-content/themes/wp-bootstrap-starter/leadership.css" />
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 
-	<section id="primary" class="content-area col-sm-12 col-lg-12">
+	<section id="primary" class="content-area col-sm-12 col-lg-12 bg-light">
 		<div id="main" class="site-main" role="main">
 
 
@@ -43,14 +43,39 @@ get_header();
 
                 <?php
                         get_template_part( 'template-parts/newsroom-first-post');
-//                        get_template_part( 'template-parts/newsroom-post-cards');
 
                 ?>
                 <?php
+                $boardMembers = array(
+                    'category' => 'Board of Directors',
+                    'title' => 'Board of Directors',
+                    'subtitle' => 'Voting members of the Board of Directors',
+                );
+                $officers = array(
+                    'category' => 'Officers',
+                    'title' => 'Board Officers',
+                    'subtitle' => '',
+                );
+                $staff = array(
+                    'category' => 'Staff',
+                    'title' => 'Staff',
+                    'subtitle' => '',
+                );
+                $advisors = array(
+                    'category' => 'Advisors',
+                    'title' => 'Advisors',
+                    'subtitle' => 'Advisors are members of the Free Mom Hugs leadership team that serve in crucial roles 
+                    necessary for Free Mom Hugs operation but are not voting members of the non-profit\'s governance structure. ',
+                );
 
                 while ( have_posts() ) : the_post();
 
-                    get_template_part( 'template-parts/newsroom-post-cards');
+                    get_template_part( 'template-parts/leadership-cards', null, $staff);
+                    get_template_part( 'template-parts/leadership-cards', null, $officers);
+                    get_template_part( 'template-parts/leadership-cards', null, $boardMembers);
+//                    get_template_part( 'template-parts/leadership-cards', null, $advisors);
+
+
 
 //                    // If comments are open or we have at least one comment, load up the comment template.
 //                    if ( comments_open() || get_comments_number() ) :
@@ -60,8 +85,9 @@ get_header();
                 endwhile; // End of the loop.
                 ?>
 
-
+                <h2>Committees</h2>
             </div>
+
 
 		</div><!-- #main -->
 

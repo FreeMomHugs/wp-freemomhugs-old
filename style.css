@@ -341,6 +341,13 @@ a.page-scroller {
   font-weight: 550;
 }
 
+.brand {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px !important;  /* 50% of your logo width */
+  display: block;
+}
+
 .headline btn {
   border-radius: 32px;
 }
@@ -352,6 +359,12 @@ a.page-scroller {
   letter-spacing: 5px;
   height: 38px;
   text-transform: uppercase;
+}
+
+.headline h1 {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1.4em;
 }
 
 .sara-home h2 {
@@ -366,6 +379,8 @@ a.page-scroller {
 .photo-home {
   border-radius: 50px;
 }
+
+
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/

@@ -13,13 +13,13 @@
 
 		<?php
 		if ( is_single() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h1 class="entry-title text-center">', '</h1>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h2 class="entry-title text-center"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
+		<div class="entry-meta text-center mb-4">
 			<?php wp_bootstrap_starter_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
@@ -29,7 +29,7 @@
         <?php the_post_thumbnail(); ?>
     </div>
     <header class="entry-header">
-	<div class="entry-content">
+	<div class="entry-content px-4">
 		<?php
         if ( is_single() ) :
 			the_content();

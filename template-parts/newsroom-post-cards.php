@@ -22,7 +22,7 @@
 
 			/* Start the Loop */
 
-            $numposts = 2;
+            $numposts = 20;
 			while ( $loop->have_posts() && $numposts > 0 ) : $loop->the_post();
 
 				/*
@@ -31,30 +31,49 @@
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
 ?>
-    <div class="col-md-6">
-        <div class="card flex-md-row mb-4 box-shadow h-md-350">
+    <div class="col-md-6 post-cards">
+
+        <div class="card flex-md-row mb-4 box-shadow h-250">
             <div class="card-body d-flex flex-column align-items-start">
-                <strong class="d-inline-block mb-2 text-primary"><?php
-                    $category = get_the_category(); echo $category[0]->cat_name;
-                    ?></strong>
-                <h3 class="mb-0">
+                <?php
+                    $category = get_the_category();
+                    $catName = $category[0]->cat_name;
+                    $textDecoration = "";
+                    if (strcasecmp($catName,"feature") == 0) {
+                        $textDecoration .= "text-primary";
+                    } elseif (strcasecmp($catName,"update") == 0) {
+                        $textDecoration .= "text-success";
+                    }
+
+                    ?>
+                <strong class="d-inline-block mb-2 <?php echo $textDecoration; ?>"><?php echo $catName; ?></strong>
+                <h3 class="mb-0 post-cards-title" style="text-overflow: ellipsis;">
 
 
                     <?php
                     if ( true ) :
-
-                        the_title( '<a class="text-dark" >', '</a>' );
-                    ?>
+                        ?><a class="text-dark" href="<?php echo get_permalink();?>"><?php echo get_the_title();?></a>
                     </h3>
                     <?php
                         the_date('M d','<div class="mb-1 text-muted">', '</div>');
-                        the_excerpt('<p class="card-text mb-auto">', '</p>');
-                    endif;
-                    ?>
+                        ?>
+                       <p class="card-text mb-auto">
+                           <?php
+                           $excerpt = get_the_excerpt();
+
+                           $excerpt = substr( $excerpt, 0, 260 ); // Only display first 260 characters of excerpt
+                           $result = substr( $excerpt, 0, strrpos( $excerpt, ' ' ) );
+//                           echo $result;
+                           ?>
+                       </p>
+                     <?php
+                        endif;
+                     ?>
 
                 <a href="<?php the_permalink()?>">Continue reading...</a>
             </div>
-            <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap">
+            <img class="card-img-right d-md-block" src="<?php the_post_thumbnail_url('medium') ?>" alt="" style="max-width: 300px;">
+
         </div>
     </div>
 

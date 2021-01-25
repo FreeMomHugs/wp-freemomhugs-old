@@ -26,18 +26,22 @@ get_header();
             'title' => 'Interested in resources?',
             'title-blurb' => 'Education',
             'button-text' => 'Learn More',
+            'background-url' => 'https://static.freemomhugs.org/wp-content/uploads/2020/10/22713631_1704555389575311_5091096668427809788_o.jpg',
             );
         $headline2 = array(
             'class' => 'featured-home',
             'title' => 'Looking for a chapter?',
             'title-blurb' => 'Get Involved',
             'button-text' => 'Learn More',
+            'background-url' => 'https://static.freemomhugs.org/wp-content/uploads/2020/11/actionvance-t7EL2iG3jMc-unsplash-scaled.jpg',
         );
         $headline3 = array(
             'class' => 'featured-home',
             'title' => 'Interested in our programs and initiatives?',
             'title-blurb' => 'Programming',
             'button-text' => 'Learn More',
+            'background-url' => 'https://static.freemomhugs.org/wp-content/uploads/2020/10/rainbow-crosswalk_t20_Qovke6-1-scaled.jpg',
+
         );
         get_template_part( 'template-parts/sara-enough-enough');
         get_template_part( 'template-parts/index-latest-news');
