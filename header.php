@@ -37,30 +37,38 @@
     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
 	<header id="masthead" class="site-header navbar-static-top <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
 
-        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white border-bottom box-shadow">
+        <nav class="navbar navbar-expand-lg navbar-light border-bottom box-shadow">
+
             <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
-                <a class="brand" href="<?php echo esc_url( home_url( '/' )); ?>">
+                <a class="navbar-brand ml-3" href="<?php echo esc_url( home_url( '/' )); ?>">
                     <img src="<?php echo esc_url(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"  style="max-height: 5rem;">
                 </a>
+
             <?php else : ?>
                 <h5 class="my-0 mr-md-auto font-weight-normal"><?php echo esc_attr( get_bloginfo( 'name' ) ); ?></h5>
             <?php endif; ?>
 
-            <?php
-            wp_nav_menu(array(
-                'theme_location'  => 'primary',
-                'container'       => 'div',
-                'container_id'    => 'menu-main',
-                'container_class' => 'my-2 my-md-0 mr-md-3 ml-auto',
-                'menu_id'         => false,
-                'menu_class'      => 'nav justify-content-end text-dark navbar-collapse collapse',
-                'depth'           => 3,
-                'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
-                'walker'          => new wp_bootstrap_navwalker()
-            ));
-            ?>
-            <a class="btn index-btn btn-outline-dark" href="#">Donate</a>
-        </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <?php
+                wp_nav_menu(array(
+                    'theme_location'  => 'primary',
+                    'container'       => 'div',
+                    'container_id'    => 'menu-main',
+                    'container_class' => 'collapse navbar-collapse',
+                    'menu_id'         => false,
+                    'menu_class'      => 'navbar-nav mx-auto mt-2 mt-lg-0',
+                    'depth'           => 3,
+                    'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
+                    'walker'          => new wp_bootstrap_navwalker()
+                ));
+                ?>
+
+                <button class="btn btn-outline-dark my-2 my-sm-0 mr-3 py-3 px-4" style="border-radius: 50px;" type="submit">Donate</button>
+            </div>
+        </nav>
 
 	</header><!-- #masthead -->
     <?php if(is_front_page() && !get_theme_mod( 'header_banner_visibility' )): ?>
