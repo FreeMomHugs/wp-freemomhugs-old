@@ -282,14 +282,24 @@ table {
   text-align: center;
   font-size: 1.25rem;
   background-size: cover !important;
+
+}
+
+#page-sub-header h3 {
+  font-size: 1em;
+  line-height: 28.799999237060547px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  height: 38px;
+  text-transform: uppercase;
 }
 
 
 
 body:not(.theme-preset-active) #page-sub-header h1 {
   line-height: 1.6;
+  font-family: 'Permanent Marker', cursive;
   font-size: 4rem;
-  color: #563e7c;
   margin: 0 0 1rem;
   border: 0;
   padding: 0;
@@ -721,9 +731,13 @@ a img.aligncenter {
 
 .nav > li > a:focus,
 .nav > li > a:hover {
-  background-color: #eee;
-  text-decoration: none;
+  text-decoration: underline;
 }
+
+nav .navbar-nav li a{
+  color: white !important;
+}
+
 .half-rule {
   width: 6rem;
   margin: 2.5rem 0;
@@ -738,6 +752,8 @@ a img.aligncenter {
 .font-700-weight {
   font-weight: 700;
 }
+
+
 
 
 /*--------------------------------------------------------------

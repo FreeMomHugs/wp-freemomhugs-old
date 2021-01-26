@@ -4,7 +4,7 @@
  */
 
 ?>
-<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3 index-news">
+<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3 pr-md-3 index-news">
 
 <?php
         $args = array(
@@ -28,7 +28,7 @@
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
 ?>
-            <div class="bg-light col-sm pt-3 px-3 pt-md-5 px-md-5 text-center text-dark" style="background-image: url('<?php the_post_thumbnail_url() ?>'); background-size: cover; background-position: center;">
+            <div class="bg-light col-sm pt-3 py-5 px-3 pt-md-5 px-md-5 text-center text-light" style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('<?php the_post_thumbnail_url() ?>'); background-size: cover; background-position: center;">
                 <div class="my-5 py-5">
                 <?php
                 if ( true ) :

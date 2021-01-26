@@ -5,7 +5,6 @@
 
 ?>
 
-<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
 
 
 <?php
@@ -30,7 +29,8 @@
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
 ?>
-    <div class="col-md-6 px-0">
+    <div class="jumbotron p-3 p-md-5 text-white rounded" style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('<?php the_post_thumbnail_url() ?>'); background-size: cover; background-position: center;">
+        <div class="col-md-6 px-0">
         <?php
         if ( true ) :
 

@@ -11,6 +11,12 @@ get_header(); ?>
 
     <link rel="stylesheet" href="../wp-content/themes/wp-bootstrap-starter/newsroom.css" />
 
+    <div id="content" class="site-content">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+
 	<section id="primary" class="content-area col-sm-8 col-lg-8 mx-auto ">
 		<div id="main" class="site-main blog-post" role="main">
 

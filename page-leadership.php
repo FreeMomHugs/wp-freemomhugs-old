@@ -18,6 +18,24 @@ get_header();
     <link rel="stylesheet" href="../wp-content/themes/wp-bootstrap-starter/leadership.css" />
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 
+
+<?php
+            $subNavBar = array(
+                'class' => 'featured-home',
+                'title' => 'Leadership and Governance',
+                'menu'  => 'Leadership',
+                'title-blurb' => 'Education',
+                'button-text' => 'Learn More',
+                'background-url' => 'https://static.freemomhugs.org/wp-content/uploads/2020/10/22713631_1704555389575311_5091096668427809788_o.jpg',
+            );
+            get_template_part( 'template-parts/category-nav-bar', null, $subNavBar);
+
+?>
+    <div id="content" class="site-content">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
 	<section id="primary" class="content-area col-sm-12 col-lg-12 bg-light">
 		<div id="main" class="site-main" role="main">
 
@@ -27,6 +45,7 @@ get_header();
                     <div class="row flex-nowrap justify-content-between align-items-center">
                         <div class="col-8 text-left">
                             <?php  the_title( '<h1 class="text-dark font-700-weight">', '</h1>' ); ?>
+
                         </div>
                         <div class="col-2 d-flex justify-content-end align-items-center">
                             <a class="text-muted" href="#">

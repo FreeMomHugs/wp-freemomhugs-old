@@ -16,6 +16,14 @@ get_header();
 
 
 ?>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <div id="content" class="site-content">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+
 
 	<section id="primary" class="content-area col-sm-12 col-md-12 col-lg-12">
 		<div id="main" class="site-main" role="main">

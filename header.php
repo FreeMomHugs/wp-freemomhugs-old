@@ -53,7 +53,7 @@
                 'container_id'    => 'menu-main',
                 'container_class' => 'my-2 my-md-0 mr-md-3 ml-auto',
                 'menu_id'         => false,
-                'menu_class'      => 'nav justify-content-end text-dark',
+                'menu_class'      => 'nav justify-content-end text-dark navbar-collapse collapse',
                 'depth'           => 3,
                 'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
                 'walker'          => new wp_bootstrap_navwalker()
@@ -66,7 +66,7 @@
     <?php if(is_front_page() && !get_theme_mod( 'header_banner_visibility' )): ?>
         <div id="page-sub-header" <?php if(has_header_image()) { ?>style="background-image: url('<?php header_image(); ?>');" <?php } ?>>
             <div class="container">
-                <h1>
+                <h3>
                     <?php
                     if(get_theme_mod( 'header_banner_title_setting' )){
                         echo esc_attr( get_theme_mod( 'header_banner_title_setting' ) );
@@ -74,8 +74,8 @@
                         echo 'WordPress + Bootstrap';
                     }
                     ?>
-                </h1>
-                <p>
+                </h3>
+                <h1>
                     <?php
                     if(get_theme_mod( 'header_banner_tagline_setting' )){
                         echo esc_attr( get_theme_mod( 'header_banner_tagline_setting' ) );
@@ -83,14 +83,10 @@
                         echo esc_html__('To customize the contents of this header banner and other elements of your site, go to Dashboard > Appearance > Customize','wp-bootstrap-starter');
                     }
                     ?>
-                </p>
+                </h1>
                 <a href="#content" class="page-scroller"><i class="fa fa-fw fa-angle-down"></i></a>
             </div>
         </div>
     <?php endif; ?>
-	<div id="content" class="site-content bg-light">
-		<div class="container">
-			<div class="row">
-            </div>
-        </div>
+
                 <?php endif; ?>

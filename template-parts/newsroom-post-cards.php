@@ -33,8 +33,9 @@
 ?>
     <div class="col-md-6 post-cards">
 
-        <div class="card flex-md-row mb-4 box-shadow h-250">
-            <div class="card-body d-flex flex-column align-items-start">
+        <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <img class="" src="<?php the_post_thumbnail_url('medium') ?>" alt="" style="object-fit: cover;">
+            <div class="card-body flex-column align-items-start">
                 <?php
                     $category = get_the_category();
                     $catName = $category[0]->cat_name;
@@ -46,6 +47,7 @@
                     }
 
                     ?>
+
                 <strong class="d-inline-block mb-2 <?php echo $textDecoration; ?>"><?php echo $catName; ?></strong>
                 <h3 class="mb-0 post-cards-title" style="text-overflow: ellipsis;">
 
@@ -72,7 +74,7 @@
 
                 <a href="<?php the_permalink()?>">Continue reading...</a>
             </div>
-            <img class="card-img-right d-md-block" src="<?php the_post_thumbnail_url('medium') ?>" alt="" style="max-width: 300px;">
+
 
         </div>
     </div>
