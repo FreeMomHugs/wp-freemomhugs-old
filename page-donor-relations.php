@@ -21,6 +21,7 @@ get_header();
 
 <?php
             $parentPageID = get_post_ancestors(get_the_ID());
+            $parentPageID = get_post_ancestors(get_the_ID());
             if(sizeof($parentPageID) > 0) {
                 $parentPageTitle = get_the_title($parentPageID[0]);
             } else {
@@ -30,7 +31,7 @@ get_header();
             $subNavBar = array(
                 'class' => 'featured-home',
                 'title' => $parentPageTitle,
-                'url'   => get_post_permalink($parentPageID[0]),
+                'url'   => get_post_permalink($parentPageID),
                 'menu'  => 'Leadership',
                 'title-blurb' => 'Education',
                 'button-text' => 'Learn More',
